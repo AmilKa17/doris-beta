@@ -1,0 +1,928 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Парикмахерская «Дорис» Нижнекамск | Стрижки, окрашивание, маникюр</title>
+    <meta name="description" content="Парикмахерская Дорис в Нижнекамске на просп. Химиков, 53Б. Женские и мужские стрижки от 600₽, окрашивание хной, уход за волосами. Wi-Fi, предварительная запись. Звоните: +7 (987) 266-46-95">
+    <meta name="keywords" content="парикмахерская Нижнекамск, Дорис парикмахерская, стрижка Нижнекамск, мужская стрижка Нижнекамск, женская стрижка Нижнекамск, окрашивание хной Нижнекамск, проспект Химиков парикмахерская">
+    <meta name="robots" content="index, follow">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #fff5f7;
+            color: #4a3040;
+            line-height: 1.6;
+            scroll-behavior: smooth;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Шапка */
+        header {
+            background-color: #ffffff;
+            box-shadow: 0 4px 15px rgba(255, 182, 193, 0.2);
+            padding: 12px 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            border-bottom: 2px solid #ffb6c1;
+        }
+
+        .header-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+        .logo-block {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo-image {
+            height: 55px;
+            width: 55px;
+            border-radius: 50%;
+            object-fit: cover;
+            box-shadow: 0 4px 12px rgba(244, 194, 194, 0.4);
+            border: 2px solid #ffd1dc;
+            background: #fff;
+            padding: 2px;
+        }
+
+        .logo-text {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: #d47b8c;
+            letter-spacing: 2px;
+            font-family: 'Georgia', serif;
+            line-height: 1.1;
+        }
+
+        .slogan {
+            font-size: 0.8rem;
+            color: #b85b6e;
+            font-style: italic;
+            font-family: 'Georgia', serif;
+        }
+
+        .header-rating {
+            background: #fff0f3;
+            padding: 6px 12px;
+            border-radius: 20px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            color: #b85b6e;
+            border: 1px solid #ffd1dc;
+        }
+
+        .header-rating i {
+            color: #f4c542;
+        }
+
+        /* Герой */
+        .hero {
+            background: linear-gradient(135deg, #ffffff 0%, #fff0f3 100%);
+            padding: 45px 0 35px;
+            text-align: center;
+            border-bottom: 3px solid #ffd1dc;
+        }
+
+        .hero h1 {
+            font-size: 2.3rem;
+            color: #c96b7e;
+            margin-bottom: 5px;
+            font-family: 'Georgia', serif;
+        }
+
+        .hero .address-line {
+            font-size: 1rem;
+            color: #8b6b7a;
+            margin-bottom: 5px;
+        }
+
+        .hero .rating-stars {
+            color: #f4c542;
+            font-size: 1.1rem;
+            margin-bottom: 3px;
+        }
+
+        .hero .rating-text {
+            color: #8b6b7a;
+            font-size: 0.9rem;
+            margin-bottom: 15px;
+        }
+
+        .hero .hero-slogan {
+            font-size: 1.1rem;
+            color: #8b6b7a;
+            font-style: italic;
+            margin-bottom: 20px;
+            font-family: 'Georgia', serif;
+        }
+
+        /* Кнопки связи */
+        .contact-buttons {
+            display: flex;
+            gap: 12px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn-contact {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            padding: 14px 24px;
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: 1rem;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn-phone {
+            background: #d47b8c;
+            color: white;
+        }
+        .btn-phone:hover {
+            background: #c96b7e;
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(212, 123, 140, 0.4);
+        }
+
+        .btn-whatsapp {
+            background: #25D366;
+            color: white;
+        }
+        .btn-whatsapp:hover {
+            background: #20ba57;
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(37, 211, 102, 0.4);
+        }
+
+        .btn-vk {
+            background: #0077FF;
+            color: white;
+        }
+        .btn-vk:hover {
+            background: #0066dd;
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(0, 119, 255, 0.4);
+        }
+
+        .btn-tg {
+            background: #2AABEE;
+            color: white;
+        }
+        .btn-tg:hover {
+            background: #2291cc;
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(42, 171, 238, 0.4);
+        }
+
+        /* Секции */
+        section {
+            padding: 45px 0;
+        }
+
+        h2 {
+            font-size: 1.9rem;
+            color: #b85b6e;
+            text-align: center;
+            font-family: 'Georgia', serif;
+            margin-bottom: 8px;
+        }
+        h2::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 3px;
+            background: #f4c2c2;
+            margin: 8px auto 0;
+            border-radius: 5px;
+        }
+
+        .subtitle {
+            text-align: center;
+            color: #8b6b7a;
+            margin-bottom: 30px;
+        }
+
+        /* Фото */
+        .photos-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin-top: 10px;
+        }
+
+        .photo-card {
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 6px 20px rgba(255, 182, 193, 0.25);
+            transition: transform 0.3s;
+            background: #fff;
+            aspect-ratio: 1 / 1;
+        }
+        .photo-card:hover {
+            transform: scale(1.03);
+        }
+        .photo-card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* Услуги */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 20px;
+        }
+
+        .service-card {
+            background: #ffffff;
+            border-radius: 20px;
+            padding: 25px 20px;
+            text-align: center;
+            box-shadow: 0 8px 25px rgba(255, 182, 193, 0.2);
+            border: 1px solid #ffe4e9;
+            transition: transform 0.3s;
+        }
+        .service-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .service-icon {
+            font-size: 2.3rem;
+            color: #d47b8c;
+            margin-bottom: 10px;
+        }
+
+        .service-card h3 {
+            color: #b85b6e;
+            margin-bottom: 6px;
+        }
+
+        .price {
+            font-weight: 700;
+            font-size: 1.2rem;
+            color: #c96b7e;
+            margin-top: 10px;
+        }
+
+        /* Особенности */
+        .features-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            justify-content: center;
+        }
+
+        .feature-badge {
+            background: #ffffff;
+            border: 2px solid #ffd1dc;
+            padding: 12px 20px;
+            border-radius: 50px;
+            font-weight: 600;
+            color: #b85b6e;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        /* Акции */
+        .promo-section {
+            background: #ffffff;
+            border-radius: 25px;
+            padding: 30px;
+            box-shadow: 0 10px 30px rgba(255, 182, 193, 0.2);
+            border: 1px solid #ffd1dc;
+        }
+
+        .promo-list {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .promo-item {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            background: #fff5f7;
+            padding: 15px 20px;
+            border-radius: 15px;
+            border-left: 5px solid #f4c2c2;
+            font-size: 1.05rem;
+        }
+
+        .promo-item i {
+            font-size: 1.8rem;
+            color: #d47b8c;
+            width: 35px;
+            text-align: center;
+        }
+
+        /* Мастера */
+        .masters-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+        }
+
+        .master-card {
+            background: #ffffff;
+            border-radius: 20px;
+            padding: 25px 20px;
+            text-align: center;
+            box-shadow: 0 8px 25px rgba(255, 182, 193, 0.2);
+            border: 1px solid #ffe4e9;
+            transition: transform 0.3s;
+        }
+        .master-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .master-avatar {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            background: #f4c2c2;
+            margin: 0 auto 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            color: white;
+        }
+
+        .master-card h3 {
+            color: #b85b6e;
+            margin-bottom: 4px;
+        }
+
+        .master-spec {
+            font-size: 0.9rem;
+            color: #8b6b7a;
+            margin-bottom: 10px;
+        }
+
+        .master-contact {
+            display: flex;
+            gap: 10px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .master-contact a {
+            background: #fff0f3;
+            color: #b85b6e;
+            padding: 8px 14px;
+            border-radius: 20px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.9rem;
+            transition: all 0.3s;
+            border: 1px solid #ffd1dc;
+        }
+        .master-contact a:hover {
+            background: #f4c2c2;
+            color: white;
+        }
+
+        /* Форма записи */
+        .booking-section {
+            background: #ffffff;
+            border-radius: 25px;
+            padding: 30px;
+            box-shadow: 0 10px 30px rgba(255, 182, 193, 0.2);
+            border: 1px solid #ffd1dc;
+            max-width: 650px;
+            margin: 0 auto;
+        }
+
+        .form-group {
+            margin-bottom: 18px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 6px;
+            font-weight: 600;
+            color: #8b4b5e;
+        }
+
+        input,
+        select {
+            width: 100%;
+            padding: 14px 18px;
+            border: 2px solid #ffd1dc;
+            border-radius: 30px;
+            font-size: 1rem;
+            background-color: #fffafa;
+            transition: border 0.3s, box-shadow 0.3s;
+            outline: none;
+            color: #4a3040;
+        }
+
+        input:focus,
+        select:focus {
+            border-color: #e6a0b0;
+            box-shadow: 0 0 0 3px rgba(230, 160, 176, 0.2);
+        }
+
+        .btn-submit {
+            width: 100%;
+            margin-top: 10px;
+            padding: 16px;
+            background: #f4c2c2;
+            color: white;
+            border: none;
+            border-radius: 30px;
+            font-weight: 700;
+            font-size: 1.1rem;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        .btn-submit:hover {
+            background: #d47b8c;
+        }
+
+        .success-message {
+            background-color: #f4c2c2;
+            color: white;
+            padding: 15px;
+            border-radius: 20px;
+            text-align: center;
+            margin-top: 15px;
+            display: none;
+        }
+
+        /* Карта */
+        .map-container {
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 8px 25px rgba(255, 182, 193, 0.2);
+            margin-top: 10px;
+        }
+
+        /* Футер */
+        footer {
+            background: #ffffff;
+            border-top: 2px solid #ffd1dc;
+            padding: 25px 0;
+            text-align: center;
+            color: #8b6b7a;
+        }
+
+        .social-icons {
+            margin-top: 10px;
+            display: flex;
+            justify-content: center;
+            gap: 18px;
+        }
+        .social-icons a {
+            color: #d47b8c;
+            font-size: 1.5rem;
+            transition: color 0.3s;
+        }
+        .social-icons a:hover {
+            color: #b85b6e;
+        }
+
+        @media (max-width: 600px) {
+            .hero h1 {
+                font-size: 1.7rem;
+            }
+            .btn-contact {
+                padding: 12px 16px;
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- ШАПКА -->
+    <header>
+        <div class="container header-inner">
+            <div class="logo-block">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTLNaYcwcxqfb-BYv3sUKqjuhd9S_GJegccYRYDPOn6xA&s"
+                alt="Логотип парикмахерской Дорис Нижнекамск"
+                class="logo-image"
+                loading="lazy">
+                <div class="logo-text">
+                    <div class="logo">Дорис ✧</div>
+                    <div class="slogan">Создание красоты — это искусство</div>
+                </div>
+            </div>
+            <div class="header-rating">
+                <i class="fas fa-star"></i> 4,1 • 6 оценок
+            </div>
+        </div>
+    </header>
+
+    <!-- ГЕРОЙ -->
+    <section class="hero">
+        <div class="container">
+            <h1>Парикмахерская «Дорис»</h1>
+            <div class="rating-stars">
+                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+            </div>
+            <div class="rating-text">Рейтинг 4,1 • 6 оценок на Яндекс.Картах</div>
+            <p class="address-line"><i class="fas fa-map-marker-alt"></i> просп. Химиков, 53Б, Нижнекамск</p>
+            <div class="hero-slogan">Создание красоты — это искусство</div>
+            <p style="margin-bottom: 20px; color: #6d4c5b;">
+                <i class="far fa-clock"></i> Открыто до 19:00 • Предварительная запись
+            </p>
+
+            <!-- Кнопки связи -->
+            <div class="contact-buttons">
+                <a href="tel:+79872664695" class="btn-contact btn-phone">
+                    <i class="fas fa-phone-alt"></i> Позвонить
+                </a>
+                <a href="https://wa.me/79872664695?text=Здравствуйте!%20Хочу%20записаться%20в%20Дорис" class="btn-contact btn-whatsapp" target="_blank" rel="noopener">
+                    <i class="fab fa-whatsapp"></i> WhatsApp
+                </a>
+                <a href="https://t.me/+79872664695" class="btn-contact btn-tg" target="_blank" rel="noopener">
+                    <i class="fab fa-telegram-plane"></i> Telegram
+                </a>
+                <a href="https://vk.com/write-222346620" class="btn-contact btn-vk" target="_blank" rel="noopener">
+                    <i class="fab fa-vk"></i> ВКонтакте
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ФОТО -->
+    <section>
+        <div class="container">
+            <h2>Фотографии салона</h2>
+            <p class="subtitle">Уютная атмосфера ждёт вас</p>
+            <div class="photos-grid">
+                <div class="photo-card">
+                    <img src="https://avatars.mds.yandex.net/get-altay/18105299/2a0000019c424a13b159c5f851e202aa1eff/XXL_height"
+                    alt="Парикмахерская Дорис Нижнекамск — интерьер"
+                    loading="lazy">
+                </div>
+                <div class="photo-card">
+                    <img src="https://avatars.mds.yandex.net/get-altay/19707167/2a0000019c42496a90723299d47e594c6fc8/XXL_height"
+                    alt="Парикмахерская Дорис Нижнекамск — рабочее место"
+                    loading="lazy">
+                </div>
+                <div class="photo-card">
+                    <img src="https://avatars.mds.yandex.net/get-altay/16500335/2a0000019c424a0f58b6a872018acdc37717/XXXL"
+                    alt="Парикмахерская Дорис Нижнекамск — зал"
+                    loading="lazy">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- УСЛУГИ И ЦЕНЫ -->
+    <section>
+        <div class="container">
+            <h2>Услуги и цены</h2>
+            <p class="subtitle">Качественно и доступно</p>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon"><i class="fas fa-female"></i></div>
+                    <h3>Женская стрижка</h3>
+                    <p>Модельные стрижки, укладка, стайлинг</p>
+                    <div class="price">от 600 ₽</div>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon"><i class="fas fa-male"></i></div>
+                    <h3>Мужская стрижка</h3>
+                    <p>Классические и современные мужские стрижки</p>
+                    <div class="price">от 600 ₽</div>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon"><i class="fas fa-leaf"></i></div>
+                    <h3>Окрашивание хной</h3>
+                    <p>Натуральное окрашивание, безопасное для волос</p>
+                    <div class="price">от 800 ₽</div>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon"><i class="fas fa-spa"></i></div>
+                    <h3>Уход за волосами</h3>
+                    <p>Маски, ламинирование, восстановление</p>
+                    <div class="price">от 1 000 ₽</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ОСОБЕННОСТИ -->
+    <section>
+        <div class="container">
+            <h2>Особенности салона</h2>
+            <p class="subtitle">Почему выбирают нас</p>
+            <div class="features-grid">
+                <div class="feature-badge"><i class="fas fa-wifi"></i> Wi-Fi</div>
+                <div class="feature-badge"><i class="fas fa-leaf"></i> Окрашивание хной</div>
+                <div class="feature-badge"><i class="fas fa-calendar-check"></i> Предварительная запись</div>
+                <div class="feature-badge"><i class="fas fa-gift"></i> Подарочный сертификат</div>
+                <div class="feature-badge"><i class="fas fa-money-bill-wave"></i> Оплата наличными</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- АКЦИИ -->
+    <section>
+        <div class="container">
+            <h2>Акции и предложения</h2>
+            <p class="subtitle">Успейте записаться!</p>
+            <div class="promo-section">
+                <ul class="promo-list">
+                    <li class="promo-item">
+                        <i class="fas fa-gift"></i>
+                        <div><strong>Подарочный сертификат</strong> — порадуйте близких красивой стрижкой или уходом</div>
+                    </li>
+                    <li class="promo-item">
+                        <i class="fas fa-percent"></i>
+                        <div><strong>Скидка 15%</strong> в день рождения и 3 дня после</div>
+                    </li>
+                    <li class="promo-item">
+                        <i class="fas fa-user-friends"></i>
+                        <div><strong>«Приведи друга»</strong> — оба получаете скидку 10%</div>
+                    </li>
+                    <li class="promo-item">
+                        <i class="fas fa-clock"></i>
+                        <div><strong>Утренняя запись</strong> — скидка 10% при записи на 10:00</div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- МАСТЕРА -->
+    <section>
+        <div class="container">
+            <h2>Наши мастера</h2>
+            <p class="subtitle">Опытные специалисты — все заявки принимает администратор</p>
+            <div class="masters-grid">
+                <div class="master-card">
+                    <div class="master-avatar"><i class="fas fa-user-circle"></i></div>
+                    <h3>Елена</h3>
+                    <p class="master-spec">Женские стрижки, окрашивание хной</p>
+                    <div class="master-contact">
+                        <a href="https://wa.me/79872664695?text=Здравствуйте!%20Хочу%20записаться%20к%20Елене"><i class="fab fa-whatsapp"></i> Запись к Елене</a>
+                    </div>
+                </div>
+                <div class="master-card">
+                    <div class="master-avatar"><i class="fas fa-user-circle"></i></div>
+                    <h3>Ольга</h3>
+                    <p class="master-spec">Мужские стрижки, уход за волосами</p>
+                    <div class="master-contact">
+                        <a href="https://wa.me/79872664695?text=Здравствуйте!%20Хочу%20записаться%20к%20Ольге"><i class="fab fa-whatsapp"></i> Запись к Ольге</a>
+                    </div>
+                </div>
+                <div class="master-card">
+                    <div class="master-avatar"><i class="fas fa-user-circle"></i></div>
+                    <h3>Марина</h3>
+                    <p class="master-spec">Окрашивание, мелирование, укладки</p>
+                    <div class="master-contact">
+                        <a href="https://wa.me/79872664695?text=Здравствуйте!%20Хочу%20записаться%20к%20Марине"><i class="fab fa-whatsapp"></i> Запись к Марине</a>
+                    </div>
+                </div>
+                <div class="master-card">
+                    <div class="master-avatar"><i class="fas fa-user-circle"></i></div>
+                    <h3>Анна</h3>
+                    <p class="master-spec">Универсал — женские и мужские стрижки</p>
+                    <div class="master-contact">
+                        <a href="https://wa.me/79872664695?text=Здравствуйте!%20Хочу%20записаться%20к%20Анне"><i class="fab fa-whatsapp"></i> Запись к Анне</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ЗАПИСЬ ОНЛАЙН -->
+    <section>
+        <div class="container">
+            <h2>Запись онлайн</h2>
+            <p class="subtitle">Заполните форму — и мы подтвердим запись в WhatsApp</p>
+            <div class="booking-section">
+                <form id="appointmentForm">
+                    <div class="form-group">
+                        <label for="name">Ваше имя</label>
+                        <input type="text" id="name" placeholder="Например: Анна" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Телефон</label>
+                        <input type="tel" id="phone" placeholder="+7 (___) ___-__-__" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="master">Выберите мастера</label>
+                        <select id="master" required>
+                            <option value="">-- Выберите мастера --</option>
+                            <option value="Елена">Елена — женские стрижки, окрашивание</option>
+                            <option value="Ольга">Ольга — мужские стрижки, уход</option>
+                            <option value="Марина">Марина — окрашивание, укладки</option>
+                            <option value="Анна">Анна — универсал</option>
+                            <option value="На усмотрение салона">На усмотрение салона (любой свободный мастер)</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="service">Услуга</label>
+                        <select id="service" required>
+                            <option value="">-- Выберите услугу --</option>
+                            <option value="Женская стрижка">Женская стрижка (от 600₽)</option>
+                            <option value="Мужская стрижка">Мужская стрижка (от 600₽)</option>
+                            <option value="Окрашивание хной">Окрашивание хной (от 800₽)</option>
+                            <option value="Уход за волосами">Уход за волосами (от 1000₽)</option>
+                            <option value="Другое">Другое / нужна консультация</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="date">Дата</label>
+                        <input type="date" id="date" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="timeSelect">Время</label>
+                        <select id="timeSelect" required>
+                            <option value="">-- Выберите время --</option>
+                            <option value="10:00">10:00</option>
+                            <option value="11:00">11:00</option>
+                            <option value="12:00">12:00</option>
+                            <option value="13:00">13:00</option>
+                            <option value="14:00">14:00</option>
+                            <option value="15:00">15:00</option>
+                            <option value="16:00">16:00</option>
+                            <option value="17:00">17:00</option>
+                            <option value="18:00">18:00</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="btn-submit">Записаться ✨</button>
+                </form>
+                <div id="successMessage" class="success-message">
+                    <i class="fas fa-check-circle"></i> Заявка отправлена! Сейчас откроется WhatsApp — нажмите «Отправить».
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- КАРТА -->
+    <section>
+        <div class="container">
+            <h2>Как нас найти</h2>
+            <p class="subtitle">просп. Химиков, 53Б, Нижнекамск</p>
+            <div class="map-container">
+                <iframe src="https://yandex.ru/map-widget/v1/?ll=51.8240%2C55.6380&mode=search&ol=geo&ouri=ymapsbm1%3A%2F%2Fgeo%3Fdata%3DCgg1NjA4NjI5ORJi0KDQvtGB0YHQuNGPLCDQoNC10YHQv9GD0LHQu9C40LrQsCDQotCw0YLQsNGA0YHRgtCw0L0sINCd0LjQttC90LXQutCw0LzRgdC6LCDQv9GA0L7RgdC_LiDQpdC40LzQuNC60L7QsiwgNTPQkSIKDUGLP0IVVc9eQg%3D%3D&z=17"
+                width="100%"
+                height="400"
+                style="border:0;"
+                allowfullscreen=""
+                loading="lazy"
+                title="Парикмахерская Дорис на карте Нижнекамска">
+            </iframe>
+        </div>
+        <p style="text-align:center; margin-top: 10px;">
+            <a href="https://yandex.ru/maps/org/doris/1113557841" target="_blank" rel="noopener" style="color: #d47b8c; font-weight: 600;">
+                <i class="fas fa-external-link-alt"></i> Открыть в Яндекс.Картах
+            </a>
+        </p>
+    </div>
+</section>
+
+<!-- ФУТЕР -->
+<footer>
+    <div class="container">
+        <p style="font-weight: 700; color: #d47b8c; font-family: 'Georgia', serif; font-size: 1.3rem;">Дорис ✧</p>
+        <p>Парикмахерская в Нижнекамске</p>
+        <p style="font-style: italic; color: #b85b6e;">Создание красоты — это искусство</p>
+        <p style="margin-top: 8px;">
+            <i class="fas fa-map-marker-alt"></i> просп. Химиков, 53Б, Нижнекамск
+        </p>
+        <p>
+            <a href="tel:+79872664695" style="color: #b85b6e; text-decoration: none; font-weight: 600;">+7 (987) 266-46-95</a>
+        </p>
+        <p>
+            <i class="far fa-clock"></i> Открыто до 19:00 • Предварительная запись
+        </p>
+        <div class="social-icons">
+            <a href="https://wa.me/79872664695" target="_blank" rel="noopener" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+            <a href="https://t.me/+79872664695" target="_blank" rel="noopener" title="Telegram"><i class="fab fa-telegram-plane"></i></a>
+            <a href="https://vk.com/write-222346620" target="_blank" rel="noopener" title="ВКонтакте"><i class="fab fa-vk"></i></a>
+        </div>
+        <p style="font-size: 0.8rem; margin-top: 10px; color: #aaa;">Оплата: наличными • Wi-Fi • Подарочные сертификаты</p>
+    </div>
+</footer>
+
+<script>
+    // Установка минимальной даты (сегодня)
+    const dateInput = document.getElementById('date');
+    const today = new Date().toISOString().split('T')[0];
+    dateInput.setAttribute('min', today);
+
+    // Маска телефона
+    const phoneInput = document.getElementById('phone');
+    phoneInput.addEventListener('input', function(e) {
+        let value = this.value.replace(/\D/g, '');
+        if (value.startsWith('7') && value.length > 1) value = value.substring(1);
+        if (value.startsWith('8')) value = value.substring(1);
+        if (value.length > 10) value = value.substring(0, 10);
+
+        let formatted = '';
+        if (value.length > 0) formatted += '(' + value.substring(0, 3);
+        if (value.length >= 4) formatted += ') ' + value.substring(3, 6);
+        if (value.length >= 7) formatted += '-' + value.substring(6, 8);
+        if (value.length >= 9) formatted += '-' + value.substring(8, 10);
+        this.value = formatted;
+    });
+
+    // Отправка формы
+    const form = document.getElementById('appointmentForm');
+    const successMessage = document.getElementById('successMessage');
+
+    form.addEventListener('submit', function(e) {
+        e.preventDefault();
+
+        const name = document.getElementById('name').value.trim();
+        const rawPhone = phoneInput.value.replace(/\D/g, '');
+        const master = document.getElementById('master').value;
+        const service = document.getElementById('service').value;
+        const date = dateInput.value;
+        const time = document.getElementById('timeSelect').value;
+
+        // Проверки
+        if (!name) {
+            alert('Пожалуйста, введите ваше имя.');
+            return;
+        }
+        if (rawPhone.length < 10) {
+            alert('Пожалуйста, введите полный номер телефона (10 цифр).');
+            return;
+        }
+        if (!master) {
+            alert('Пожалуйста, выберите мастера.');
+            return;
+        }
+        if (!service) {
+            alert('Пожалуйста, выберите услугу.');
+            return;
+        }
+        if (!date) {
+            alert('Пожалуйста, выберите дату.');
+            return;
+        }
+        if (!time) {
+            alert('Пожалуйста, выберите время.');
+            return;
+        }
+
+        const phone = '+7' + rawPhone;
+
+        const waMessage = encodeURIComponent(
+            `Здравствуйте! Хочу записаться:\n\n` +
+            `👤 Имя: ${name}\n` +
+            `📞 Телефон: ${phone}\n` +
+            `💇 Мастер: ${master}\n` +
+            `💆 Услуга: ${service}\n` +
+            `📅 Дата: ${date}\n` +
+            `⏰ Время: ${time}`
+        );
+
+        // Открываем WhatsApp с готовым сообщением
+        window.open(`https://wa.me/79872664695?text=${waMessage}`, '_blank');
+
+        // Показываем сообщение об успехе
+        form.style.display = 'none';
+        successMessage.style.display = 'block';
+
+        // Через 5 секунд возвращаем форму
+        setTimeout(() => {
+            form.style.display = 'block';
+            successMessage.style.display = 'none';
+            form.reset();
+        }, 5000);
+    });
+</script>
+</body>
+</html>
